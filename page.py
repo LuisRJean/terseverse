@@ -1,6 +1,6 @@
-import 
- 
-ig = instaloader.Instaloader()
+import instalooter
+
+ig = instaloader.Instaloaderr()
 DP = input("luisrjean : ")
  
 ig.download_profile(DP , profile_pic_only=True)
