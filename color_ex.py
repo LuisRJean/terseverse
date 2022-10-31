@@ -42,3 +42,4 @@ class ColorExtractor():
         self.use_lab = use_lab
 
 
+c
