@@ -47,4 +47,4 @@ class ColorExtractor():
         clt = KMeans(n_clusters=n_colors)
         clt.fit(image)
         # return the colors
-        return clt.cluster_cente
+        return clt.cluster_centers_
