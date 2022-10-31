@@ -41,3 +41,7 @@ class ColorExtractor():
         self.max_distance = max_distance
         self.use_lab = use_lab
 
+
+class color():
+    def __init__(self, max_distance=5, use_lab=True) -> None:
+        pass
