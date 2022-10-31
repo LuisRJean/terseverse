@@ -39,4 +39,5 @@ class ColorExtractor():
     def __init__(self, max_distance=5, use_lab=True) -> None:
         self.max_distance = max_distance
         self.use_lab = use_lab
-        
+
+    def get_colors(self, image, n_colors=3):
