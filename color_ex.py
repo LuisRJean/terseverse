@@ -17,3 +17,22 @@ class Back():
         pass
 
     def get_background(self, image):
+        # convert to grayscale
+        gray = skc.rgb2gray(image)
+        # apply threshold
+        thresh = skf.threshold_otsu(gray)
+        # apply morphology
+        binary = gray > thresh
+        binary = skm.binary_closing(binary, skm.disk(5))
+        # label the image
+        labels = label(binary)
+        # get the largest label
+        largest_label = np.argmax(np.bincount(labels.flat)[1:]) + 1
+        # get the mask
+        mask = labels == largest_label
+        # apply the mask
+        masked = np.zeros_like(image)
+        masked[mask] = image[mask]
+        return masked
+
+        
