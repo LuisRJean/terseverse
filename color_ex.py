@@ -12,4 +12,6 @@ import skimage.color as skc
 import skimage.morphology as skm
 from skimage.measure import label
 
-class Back ()¨
+class Back():
+    def __init__(self) -> None:
+        pass
