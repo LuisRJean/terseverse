@@ -15,3 +15,5 @@ from skimage.measure import label
 class Back():
     def __init__(self, max_distance=5, use_lab=True) -> None:
         pass
+
+    def get_background(self, image):
