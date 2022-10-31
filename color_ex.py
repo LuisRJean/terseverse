@@ -42,4 +42,3 @@ class ColorExtractor():
         self.use_lab = use_lab
 
 
-class ColorExtractor():
