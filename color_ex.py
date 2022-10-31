@@ -44,7 +44,4 @@ class ColorExtractor():
         # reshape the image to be a list of pixels
         image = image.reshape((image.shape[0] * image.shape[1], 3))
         # cluster the pixel intensities
-        clt = KMeans(n_clusters=n_colors)
-        clt.fit(image)
-        # return the colors
-        return clt.cluster_centers
+        c
