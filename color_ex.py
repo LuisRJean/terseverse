@@ -39,3 +39,13 @@ class ColorExtractor():
     def __init__(self, max_distance=5, use_lab=True) -> None:
         self.max_distance = max_distance
         self.use_lab = use_lab
+
+    def get_colors(self, image, n_colors=3):
+        # reshape the image to be a list of pixels
+        image = image.reshape((image.shape[0] * image.shape[1], 3))
+        # cluster the pixel intensities
+        clt = KMeans(n_clusters=n_colors)
+        clt.fit(image)
+        # return the colors
+        return clt.cluster_centers_
+        
